@@ -1,0 +1,140 @@
+.box {
+    width: 25%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.title {
+    color: #1DBEB4;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.segment {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.redirect {
+    font-size: 12px;
+    text-align: center;
+}
+
+.box_button {
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+
+.button {
+    text-align: center;
+    background-color: #1DBEB4;
+    color: white;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #1DBEB4;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.input {
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.signup {
+    color: royalblue;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+}
+
+.errorForm {
+    color: red;
+    font-size: 10px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    text-align: right;
+    font-weight: bold;
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.inputError {
+    height: 40px;
+    margin-top: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    background-color: #FFE1E1;
+}
+
+.errorReserv{
+    border-radius: 5px;
+    background: #fae0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 30px;
+    height: 70px;
+}
+
+.errorReservText{
+    color: #b00020;
+    font-size: 14px;
+}
+
+.errorReserv svg{
+    color: #b00020;
+    font-size: 40px;
+}
+
+@media (max-width: 1200px) {
+    .box {
+        width: 50%;
+    }
+
+    .box_button {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 643px) {
+
+    .box {
+        width: 75%;
+    }
+}

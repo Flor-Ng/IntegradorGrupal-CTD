@@ -1,0 +1,168 @@
+.navMenu{
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    right: -100%;
+    flex-direction: column;
+    transition: 850ms;
+    z-index: 1 !important;
+}
+
+.navMenuActive {
+    width: 70%;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    flex-direction: row;
+    right: 0;
+    flex-direction: column;
+    transition: 350ms;
+    z-index: 1 !important;
+  }
+
+  .topNav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #1DBEB4;
+    color: white;
+    height: 185px;
+    
+}
+
+  .topNav p{
+    align-self: flex-end;
+    margin: 0;
+    padding: 6px 10px;
+  }
+
+  .bottomNav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 80%;
+  }
+
+  .bottomNav ul{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 22%;
+    grid-gap: 37px;
+    gap: 24px;
+    width: 100%;
+    align-items: flex-end;
+    padding: 23px 15px 0 0;
+  }
+
+  .bottomNav ul li a{
+    text-decoration: none;
+    width: 100%;
+    color: #383B58;
+    font-size: 21px;
+    font-weight: 700;
+  }
+
+  .bottomNav ul hr{
+    margin: 0;
+    height: 2px;
+    width: 97%;
+    border: 1px solid #545776;
+  }
+
+  .footerNav{
+    color: #545776;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 0 12px 18px 0px;
+  }
+
+  .navbarToggle{
+    font-weight: 700;
+    padding: 12px 0px 0px 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatarBox{
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 0px 10px 10px 0px;
+  }
+
+  .avatarBox h3{
+    background-color: white;
+    color: #383B58;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0px;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    padding: 5px 4.5px 4.5px 4.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .helloUser{
+    display: flex;
+    font-size: 21px;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: 700;
+  }
+
+  .greetingName{
+    color: #383B58;
+  }
+
+  .helloUser p{
+    padding: 0;
+  }
+
+  .administration{
+    text-decoration: none;
+    color: #383B58;
+    font-weight: 700;
+    font-size: 21px;
+    margin-top: 23px;
+    margin-right: 10px;
+    text-align: end;
+}
+  .navLogt{
+    margin: 0;
+    border-bottom: 1px solid black;
+    width: 93%;
+    align-self: center;
+    text-align: end;
+    font-size: 16px;
+    font-weight: 700;
+    padding-right: 5px;
+    height: 25px;
+  }
+
+  .navLogt span{
+    color: #1DBEB4;
+  }
+
+  .bottomNavLog{
+    gap: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 80%;
+  }

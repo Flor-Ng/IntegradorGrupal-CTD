@@ -1,0 +1,2220 @@
+{
+	"info": {
+		"_postman_id": "0540715c-e5bd-40ad-b7de-252918319ac0",
+		"name": "Sprint 1, 2, 3 & 4 - G6 PI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "POST users - new admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Created\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"User created successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jane\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": {{admin_email}},\r\n    \"password\": {{admin_password}},\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST users - already exists admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Email already exists\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jane\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": {{admin_email}},\r\n    \"password\": {{admin_password}},\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST users - login admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let token = pm.response.json().token\r",
+									"pm.globals.set(\"token_admin\", token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": {{admin_email}},\r\n    \"password\": {{admin_password}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST users - new user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Created\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"User created successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"James\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": {{user_email}},\r\n    \"password\": {{user_password}},\r\n    \"role\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST users - already exists user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Email already exists\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"James\",\r\n    \"lastName\": \"Doe\",\r\n    \"email\": {{user_email}},\r\n    \"password\": {{user_password}},\r\n    \"role\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST users - login user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let token = pm.response.json().token\r",
+									"pm.globals.set(\"token_user\", token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": {{user_email}},\r\n    \"password\": {{user_password}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "POST categories 1 - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Created\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Category created successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"807.000 Hoteles\",\r\n    \"title\": {{categoryTitle}},\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/259148333.jpg?k=c565b624e9b0b810bcb1a19f70a241b2fd98c0c96c73c1cb8239c9e403f98e46&o=&hp=1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST categories 2 - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Created\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Category created successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"900.000 Hostels\",\r\n    \"title\": \"Hostel\",\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/259148333.jpg?k=c565b624e9b0b810bcb1a19f70a241b2fd98c0c96c73c1cb8239c9e403f98e46&o=&hp=1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST categories - user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Forbidden\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"807.000 Hoteles\",\r\n    \"title\": {{categoryTitle}},\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/259148333.jpg?k=c565b624e9b0b810bcb1a19f70a241b2fd98c0c96c73c1cb8239c9e403f98e46&o=&hp=1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include categoryTitle\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"categoryTitle\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT categories - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include('OK\"');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{categoryId}},\r\n    \"description\": \"907.000 Hoteles\",\r\n    \"title\": \"Hotel\",\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/259148333.jpg?k=c565b624e9b0b810bcb1a19f70a241b2fd98c0c96c73c1cb8239c9e403f98e46&o=&hp=1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT categories - user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Forbidden\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{categoryId}},\r\n    \"description\": \"907.000 Hoteles\",\r\n    \"title\": \"Hotel\",\r\n    \"urlImage\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/259148333.jpg?k=c565b624e9b0b810bcb1a19f70a241b2fd98c0c96c73c1cb8239c9e403f98e46&o=&hp=1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "POST cities - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Created\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"City added successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {{cityName}},\r\n    \"country\": \"Argentina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{citiesUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{citiesUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST cities - user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Forbidden\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {{cityName}},\r\n    \"country\": \"Argentina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{citiesUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{citiesUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET cities",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include cityName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"cityName\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{citiesUrl}}/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{citiesUrl}}",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "POST products - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Created\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Product created successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {{productName}},\r\n    \"description\": \"Alta calidad en servicio, trato personalizado y calidez en cada detalle. Un espacio ambientado que sorprenderá al huésped.\",\r\n    \"latitude\": -34.2736354,\r\n    \"longitude\": -58.8988459,\r\n    \"images\": [\r\n        {\r\n            \"title\": \"Sala de juegos\",\r\n            \"url\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/47777182.jpg?k=ea525e100a690ac6f3945c67bc3ffb81482aed6e3075afc17b1ff1ed4f81916a&o=&hp=1\"\r\n        },\r\n        {\r\n            \"title\": \"Sala de juegos\",\r\n            \"url\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/47777182.jpg?k=ea525e100a690ac6f3945c67bc3ffb81482aed6e3075afc17b1ff1ed4f81916a&o=&hp=1\"\r\n        }\r\n    ],\r\n    \"categories\": {\r\n        \"id\": {{categoryId}}\r\n    },\r\n    \"city\": {\r\n        \"id\": {{cityId}}\r\n    },\r\n    \"features\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"houseRules\": \"House rule 1\",\r\n    \"healthAndSecurity\": \"Health and security 1\",\r\n    \"cancellationPolicy\": \"Cancellation 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST products - user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Forbidden\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {{productName}},\r\n    \"description\": \"Alta calidad en servicio, trato personalizado y calidez en cada detalle. Un espacio ambientado que sorprenderá al huésped.\",\r\n    \"latitude\": -34.2736354,\r\n    \"longitude\": -58.8988459,\r\n    \"images\": [\r\n        {\r\n            \"id\": 1,\r\n            \"title\": \"Sala de juegos\",\r\n            \"url\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/47777182.jpg?k=ea525e100a690ac6f3945c67bc3ffb81482aed6e3075afc17b1ff1ed4f81916a&o=&hp=1\"\r\n        },\r\n        {\r\n            \"id\": 1,\r\n            \"title\": \"Sala de juegos\",\r\n            \"url\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/47777182.jpg?k=ea525e100a690ac6f3945c67bc3ffb81482aed6e3075afc17b1ff1ed4f81916a&o=&hp=1\"\r\n        }\r\n    ],\r\n    \"categories\": {\r\n        \"id\": {{categoryId}}\r\n    },\r\n    \"city\": {\r\n        \"id\": {{cityId}}\r\n    },\r\n    \"features\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"houseRules\": \"House rule 1\",\r\n    \"healthAndSecurity\": \"Health and security 1\",\r\n    \"cancellationPolicy\": \"Cancellation 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include productName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productName\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include productId and productName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productId\"));\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productName\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/:product_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								":product_id"
+							],
+							"variable": [
+								{
+									"key": "product_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products by cities",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include the city name\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"city\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/cities?name={{city}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"cities"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{city}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products by categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include the product name\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"category\"));\r",
+									"});\r",
+									"\r",
+									"let products = pm.response.json()\r",
+									"pm.globals.set(\"products\", products)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/categories?title={{category}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "{{category}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products by dates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include productId and productName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productId\"));\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productName\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/date?startDate=2022-01-03&endDate=2022-01-04&city=Campana",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"date"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2022-01-03"
+								},
+								{
+									"key": "endDate",
+									"value": "2022-01-04"
+								},
+								{
+									"key": "city",
+									"value": "Campana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products by dates - incorrect (date before today)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Bad Request\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"The startDate must be after the current date\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/date?startDate=2021-12-02&endDate=2021-12-03&city=Campana",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"date"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2021-12-02"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-12-03"
+								},
+								{
+									"key": "city",
+									"value": "Campana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products by dates - incorrect (bad dates)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Bad Request\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Invalid date, endDate must be after startDate\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/date?startDate=2021-11-03&endDate=2021-10-04&city=Campana",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"date"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2021-11-03"
+								},
+								{
+									"key": "endDate",
+									"value": "2021-10-04"
+								},
+								{
+									"key": "city",
+									"value": "Campana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT products - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include('\"OK\"');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {{productName}},\r\n    \"description\": \"Alta calidad en servicio.\",\r\n    \"latitude\": -34.2736354,\r\n    \"longitude\": -58.8988459,\r\n    \"images\": {\r\n        \"id\": 1,\r\n        \"title\": \"Sala de juegos\",\r\n        \"url\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/47777182.jpg?k=ea525e100a690ac6f3945c67bc3ffb81482aed6e3075afc17b1ff1ed4f81916a&o=&hp=1\"\r\n    },\r\n    \"categories\": {\"id\": {{categoryId}}},\r\n    \"city\": {\"id\": {{cityId}}},\r\n    \"features\": {\r\n        \"id\": 1,\r\n        \"title\": \"Wi-Fi\",\r\n        \"url\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Wireless-icon.svg/1200px-Wireless-icon.svg.png\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT products - user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Forbidden\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": {{productName}},\r\n    \"description\": \"Alta calidad en servicio.\",\r\n    \"latitude\": -34.2736354,\r\n    \"longitude\": -58.8988459,\r\n    \"images\": {\r\n        \"id\": 1,\r\n        \"title\": \"Sala de juegos\",\r\n        \"url\": \"https://cf.bstatic.com/xdata/images/hotel/max1280x900/47777182.jpg?k=ea525e100a690ac6f3945c67bc3ffb81482aed6e3075afc17b1ff1ed4f81916a&o=&hp=1\"\r\n    },\r\n    \"categories\": {\"id\": {{categoryId}}},\r\n    \"city\": {\"id\": {{cityId}}},\r\n    \"features\": {\r\n        \"id\": 1,\r\n        \"title\": \"Wi-Fi\",\r\n        \"url\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Wireless-icon.svg/1200px-Wireless-icon.svg.png\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Features",
+			"item": [
+				{
+					"name": "GET features",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status must be \"OK\"', function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{featuresUrl}}/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{featuresUrl}}",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "POST bookings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Created\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Created\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Booking created successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"startTime\":\"19:22:00\",\r\n    \"startDate\":\"2022-08-01\",\r\n    \"endDate\":\"2022-10-02\",\r\n    \"product\":{\r\n        \"id\":1\r\n    },\r\n    \"user\": {\r\n        \"id\":2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST bookings - bad date 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Bad Request\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"The startDate must be after the current date\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"startTime\":\"19:22:00\",\r\n    \"startDate\":\"2020-08-01\",\r\n    \"endDate\":\"2020-10-02\",\r\n    \"product\":{\r\n        \"id\":1\r\n    },\r\n    \"user\": {\r\n        \"id\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST bookings - bad date 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Bad Request\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Invalid date, endDate must be after startDate\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"startTime\":\"19:22:00\",\r\n    \"startDate\":\"2022-11-01\",\r\n    \"endDate\":\"2022-10-02\",\r\n    \"product\":{\r\n        \"id\":1\r\n    },\r\n    \"user\": {\r\n        \"id\":1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST bookings - wrong token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Unauthorized\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Unauthorized\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eiHtbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW5lc2RvZXNAZ29vZ2xlLmNvbSIsImV4cCI6MTYzNzM3MzIzMX0.d61zpl0F5jebK7d3dP_pNLpHg7oqKUU-4GKB-WtNmdNGKthGkcE-aGf_X1Hm4LNPZywRDub1E0o7lr6hqin_rw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startTime\": \"10:00:03\",\r\n    \"startDate\": \"2021-02-05\",\r\n    \"endDate\": \"2021-02-05\",\r\n    \"product\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/add",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET bookings by id - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include productId and productName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productId\"));\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productName\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/:booking_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								":booking_id"
+							],
+							"variable": [
+								{
+									"key": "booking_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET bookings by id - user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Forbidden\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/:booking_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								":booking_id"
+							],
+							"variable": [
+								{
+									"key": "booking_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET bookings by user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body should include productId and productName\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productId\"));\r",
+									"    pm.expect(pm.response.text()).to.include(pm.collectionVariables.get(\"productName\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/@me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								"@me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET bookings by user - no reservations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"you have no reservations.\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{bookingsUrl}}/@me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{bookingsUrl}}",
+								"@me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products Filter Dates",
+			"item": [
+				{
+					"name": "GET products by dates - incorrect (date booked)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"[]\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/date?startDate=2022-08-01&endDate=2022-10-02&city=Campana",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"date"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2022-08-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2022-10-02"
+								},
+								{
+									"key": "city",
+									"value": "Campana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET products by dates - incorrect (date booked 2)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"[]\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{productsUrl}}/date?startDate=2022-07-31&endDate=2022-10-01&city=Campana",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{productsUrl}}",
+								"date"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2022-07-31"
+								},
+								{
+									"key": "endDate",
+									"value": "2022-10-01"
+								},
+								{
+									"key": "city",
+									"value": "Campana"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories Delete",
+			"item": [
+				{
+					"name": "DELETE categories w/ products - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Internal Server Error\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Internal Server Error\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/delete/:category_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"delete",
+								":category_id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE categories wo/ products - admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Body should be \"Category removed\".', function () {\r",
+									"    pm.response.to.have.body(\"Category removed.\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"OK\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"OK\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/delete/:category_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"delete",
+								":category_id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE categories - user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									"pm.test('Status should be \"Forbidden\"', function () {\r",
+									"    pm.expect(pm.response.status).to.equal(\"Forbidden\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_user}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{categoriesUrl}}/delete/:category_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{categoriesUrl}}",
+								"delete",
+								":category_id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "categoriesUrl",
+			"value": "categories"
+		},
+		{
+			"key": "citiesUrl",
+			"value": "cities"
+		},
+		{
+			"key": "productsUrl",
+			"value": "products"
+		},
+		{
+			"key": "cityName",
+			"value": "\"Campana\""
+		},
+		{
+			"key": "categoryTitle",
+			"value": "\"Hotel\""
+		},
+		{
+			"key": "categoryId",
+			"value": "1"
+		},
+		{
+			"key": "city",
+			"value": "Campana"
+		},
+		{
+			"key": "cityId",
+			"value": "1"
+		},
+		{
+			"key": "productName",
+			"value": "\"Sofitel La Reserva Cardales\""
+		},
+		{
+			"key": "productId",
+			"value": "1"
+		},
+		{
+			"key": "category",
+			"value": "Hotel"
+		},
+		{
+			"key": "admin_email",
+			"value": "\"janedoe@google.com\""
+		},
+		{
+			"key": "admin_password",
+			"value": "\"jane123\""
+		},
+		{
+			"key": "user_email",
+			"value": "\"jamesdoe@google.com\""
+		},
+		{
+			"key": "user_password",
+			"value": "\"james123\""
+		},
+		{
+			"key": "bookingsUrl",
+			"value": "bookings"
+		},
+		{
+			"key": "featuresUrl",
+			"value": "features"
+		}
+	]
+}

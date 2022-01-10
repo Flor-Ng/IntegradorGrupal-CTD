@@ -1,0 +1,370 @@
+
+.subHeader {
+    background-color: #545776;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 42px;
+    align-items: center;
+}
+
+.categoryName {
+    color: #F3F1ED;
+    font-size: 14px;
+    padding: 0;
+    font-weight: 500;
+}
+
+.name {
+    color: white;
+    font-size: 24px;
+    padding: 0;
+    margin-top: 0;
+}
+
+.iconBack {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.subHeaderLeft {
+    margin: 0;
+}
+
+.locationContainer {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 42px;
+    align-items: center;
+}
+
+.locationBox {
+    display: flex;
+}
+
+.location {
+    color: #383B58;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.iconLocation {
+    font-size: 14px;
+    color: #383B58;
+    margin-right: 5px;
+}
+
+.iconsBox {
+    padding: 15px 42px;
+}
+
+.icons {
+    font-size: 24px;
+    color: #383B58;
+    margin-right: 20px;
+}
+
+.imgBox {
+    padding: 5px 42px;
+    display: flex;
+    gap: 8px;
+    height: 600px;
+}
+
+.subImgBox {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.subImgBox2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    grid-gap: 8px;
+    gap: 8px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.subImgBox2 span{
+    right: 10%;
+    position: absolute;
+    bottom: 18px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.principalImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.otherImg {
+    width: 49%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.subRow {
+    display: flex;
+    gap: 8px;
+}
+
+.descriptionBox {
+    padding: 5px 42px;
+}
+
+.title {
+    padding: 20px 0px;
+    margin: 0;
+    color: #383B58;
+    font-size: 24px;
+    border-bottom: 1px solid #1DBEB4;
+}
+.descAndDateTitle{
+    padding: 20px 0px;
+    margin: 0;
+    color: #383B58;
+    font-size: 24px;
+}
+
+.description {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+}
+
+.featuresBox {
+    padding: 5px 42px;
+}
+
+.features {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.feature {
+    width: 23%;
+    display: flex;
+    padding: 20px 0px;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.feature i {
+    color: #1DBEB4;
+}
+
+.calendarBox {
+    padding: 5px 42px;
+}
+
+.mapBox {
+    padding: 5px 42px;
+}
+
+.mapBox p{
+    color: #383B58;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.map {
+    width: 100%;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.infoBox {
+    padding: 5px 42px 80px 42px;
+}
+
+.infoSet {
+    padding: 0;
+    margin: 0;
+    width: 25%;
+}
+
+.infoList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.infoPoint {
+    padding: 10px 0px;
+    font-size: 13px;
+    width: 100%;
+    font-weight: bolder;
+    color: #515152;
+}
+
+.infoTitle {
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    margin: 0;
+    color: #545776;
+    font-weight: bolder;
+}
+
+.infoContent {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.listBox {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.goReserv{
+    background: white;
+    box-shadow: 0px 2px 4px 2px #0000003b;
+    border-radius: 7px 7px 7px 7px;
+    height: 140px;
+    justify-content: center;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.calendarBox{
+    background: #ebebeb;
+}
+
+.calendarAndRes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.goReserv p, button{
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.goReserv button{
+    width: 87%;
+    background: #1DBEB4;
+    border: none;
+    color: white;
+    height: 37px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.indexDesk{
+    z-index: 1102;
+    color: black;
+    font-weight: 400;
+    position: absolute;
+    right: 50%;
+    top: 64.2%;
+    transition: 0 !important;
+}
+
+.indexTP{
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    color: white;
+    font-size: 27px;
+}
+
+.galBox{
+    position: relative;
+}
+
+@media (max-width: 1306px){
+    .calendarAndRes{
+        flex-direction: column;
+    }
+    .goReserv{
+    width: 88%;
+    flex-direction: row;   
+    background: none;
+    box-shadow: none;
+    }
+
+    .goReserv button{
+        width: 50%;
+    }
+
+    .goReserv p{
+        width: 41%;
+    }
+
+    .feature{
+        width: 49%;
+    }
+}
+
+@media (max-width: 1024px){
+    .infoSet {
+        width: 35%;
+        padding-bottom: 20px;
+    }
+    .infoContent{
+        column-gap: 122px;
+    }
+    .iconBack{
+        font-size: 35px;
+    }
+    .imgBox {
+        display: none;
+    }
+}
+
+@media (max-width: 643px){
+    .phoneFavShare{
+        position: relative;
+    }
+    .iconsBox{
+        position: absolute;
+        z-index: 1;
+        left: 3%;
+        padding: 0;
+        top: 5%;
+    }
+    .subHeader{
+        padding: 10px;
+    }
+    .locationContainer, .descriptionBox, .featuresBox, .calendarBox, .infoBox, .mapBox{
+        padding: 7px;
+    }
+    .name, .indexTP{
+        font-size: 20px;
+    }
+    .goReserv{
+        flex-direction: column;
+    }
+    .goReserv, .goReserv p, .goReserv button, .infoSet {
+        width: 100%;
+    }
+    .infoTitle{
+        font-size: 20px;
+    }
+}

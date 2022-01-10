@@ -1,0 +1,61 @@
+
+.categories{
+    padding: 0 40px;
+}
+
+.cardsComp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.recomm{
+    padding: 19px 40px;
+}
+
+.recommBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.boxAllCards{
+    padding: 0 171px;
+}
+
+@media (max-width: 1750px){
+    .boxAllCards{
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 1622px){
+    .boxAllCards{
+        padding: 0px 0px;
+    }
+}
+@media(max-width: 1220px){
+    .categories{
+        padding: 0 28px
+    }
+}
+@media (max-width: 643px){
+    .categories{
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .cardsComp{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .recomm{
+        padding: 19px 15px;
+    }
+}

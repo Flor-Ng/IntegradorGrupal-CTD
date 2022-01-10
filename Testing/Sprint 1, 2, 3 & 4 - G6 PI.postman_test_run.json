@@ -1,0 +1,1618 @@
+{
+	"id": "a27c14e8-f0ac-4be7-aee0-c24467667bee",
+	"name": "Sprint 1, 2, 3 & 4 - G6 PI",
+	"timestamp": "2021-12-10T22:16:30.752Z",
+	"collection_id": "13366844-0540715c-e5bd-40ad-b7de-252918319ac0",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 100,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "63962425-267a-48a7-8b40-5cddc7672f8e",
+			"name": "POST users - new admin",
+			"url": "http://localhost:8080/auth/register",
+			"time": 939,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Status should be \"Created\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Created\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				939
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Status should be \"Created\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "70234393-5fdd-46f0-94de-29df89bcef78",
+			"name": "POST users - already exists admin",
+			"url": "http://localhost:8080/auth/register",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "33e3a200-dd9c-4bc1-b699-deba2bed9239",
+			"name": "POST users - login admin",
+			"url": "http://localhost:8080/auth/login",
+			"time": 480,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				480
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "8397cad6-c929-4271-98b7-2acb0b2c230a",
+			"name": "POST users - new user",
+			"url": "http://localhost:8080/auth/register",
+			"time": 223,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Status should be \"Created\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Created\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				223
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Status should be \"Created\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "19c6e935-a710-467f-8ede-879be9ff8429",
+			"name": "POST users - already exists user",
+			"url": "http://localhost:8080/auth/register",
+			"time": 27,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "4c6e095b-0b06-476f-88f1-74c03a34f81c",
+			"name": "POST users - login user",
+			"url": "http://localhost:8080/auth/login",
+			"time": 232,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				232
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4e4b30ff-397c-4bea-876f-ad1c380dd4d3",
+			"name": "POST categories 1 - admin",
+			"url": "http://localhost:8080/categories/add",
+			"time": 128,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"Created\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Created\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				128
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"Created\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "2a3e37d7-d36c-4b26-8656-8b0ef7080581",
+			"name": "POST categories 2 - admin",
+			"url": "http://localhost:8080/categories/add",
+			"time": 36,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"Created\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Created\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				36
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"Created\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "55c6563d-b00e-4c17-8cb0-53158a0b5e81",
+			"name": "POST categories - user",
+			"url": "http://localhost:8080/categories/add",
+			"time": 70,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Status should be \"Forbidden\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Forbidden\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				70
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Status should be \"Forbidden\"": true
+				}
+			]
+		},
+		{
+			"id": "09cc2874-0541-4c04-bebb-9532e4b426d4",
+			"name": "GET categories",
+			"url": "http://localhost:8080/categories/list",
+			"time": 36,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body should include categoryTitle": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include categoryTitle": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				36
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body should include categoryTitle": true
+				}
+			]
+		},
+		{
+			"id": "6f5a2d5a-0ec3-49e7-856c-693799c11a94",
+			"name": "PUT categories - admin",
+			"url": "http://localhost:8080/categories/update",
+			"time": 77,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				77
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "18fd8cb4-1eee-4115-86ca-015a74b7ab2c",
+			"name": "PUT categories - user",
+			"url": "http://localhost:8080/categories/update",
+			"time": 26,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Status should be \"Forbidden\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Forbidden\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Status should be \"Forbidden\"": true
+				}
+			]
+		},
+		{
+			"id": "0764fed8-4143-48f6-84dc-f86c9216c718",
+			"name": "POST cities - admin",
+			"url": "http://localhost:8080/cities/add",
+			"time": 130,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"Created\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Created\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				130
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"Created\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "02de9987-45b6-4c51-95c9-fd0929bc216c",
+			"name": "POST cities - user",
+			"url": "http://localhost:8080/cities/add",
+			"time": 27,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Status should be \"Forbidden\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Forbidden\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Status should be \"Forbidden\"": true
+				}
+			]
+		},
+		{
+			"id": "9f3799d1-a583-4bbe-880a-fade75bdd8e4",
+			"name": "GET cities",
+			"url": "http://localhost:8080/cities/list",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body should include cityName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include cityName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body should include cityName": true
+				}
+			]
+		},
+		{
+			"id": "89a04995-fe09-45ae-9726-36e1f76750c6",
+			"name": "POST products - admin",
+			"url": "http://localhost:8080/products/add",
+			"time": 146,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"Created\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Created\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				146
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"Created\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "42bc152e-44a7-4fac-aea0-7238104b86b9",
+			"name": "POST products - user",
+			"url": "http://localhost:8080/products/add",
+			"time": 24,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Status should be \"Forbidden\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Forbidden\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Status should be \"Forbidden\"": true
+				}
+			]
+		},
+		{
+			"id": "b94f2208-e669-41f4-ac89-00c4af856970",
+			"name": "GET products",
+			"url": "http://localhost:8080/products/list",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body should include productName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include productName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body should include productName": true
+				}
+			]
+		},
+		{
+			"id": "f3257e19-0c28-4a4b-a67e-f9519d82a4a8",
+			"name": "GET products by id",
+			"url": "http://localhost:8080/products/1",
+			"time": 39,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body should include productId and productName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include productId and productName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body should include productId and productName": true
+				}
+			]
+		},
+		{
+			"id": "bbbb3365-66f0-4007-bdee-67530e5d9d01",
+			"name": "GET products by cities",
+			"url": "http://localhost:8080/products/cities?name=Campana",
+			"time": 118,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body should include the city name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include the city name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				118
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body should include the city name": true
+				}
+			]
+		},
+		{
+			"id": "4b711b7d-8551-42f1-8f27-cf09e6f8417a",
+			"name": "GET products by categories",
+			"url": "http://localhost:8080/products/categories?title=Hotel",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body should include the product name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include the product name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body should include the product name": true
+				}
+			]
+		},
+		{
+			"id": "1acd6935-1a84-491d-ad19-77bf0e6d669f",
+			"name": "GET products by dates",
+			"url": "http://localhost:8080/products/date?startDate=2022-01-03&endDate=2022-01-04&city=Campana",
+			"time": 89,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body should include productId and productName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include productId and productName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				89
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body should include productId and productName": true
+				}
+			]
+		},
+		{
+			"id": "2b0ba02b-72cc-4e80-bacf-fdc71fd31858",
+			"name": "GET products by dates - incorrect (date before today)",
+			"url": "http://localhost:8080/products/date?startDate=2021-12-02&endDate=2021-12-03&city=Campana",
+			"time": 18,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Status should be \"Bad Request\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Bad Request\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Status should be \"Bad Request\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "aac042d6-bd5c-4ca1-b47d-d2d51fb00a0b",
+			"name": "GET products by dates - incorrect (bad dates)",
+			"url": "http://localhost:8080/products/date?startDate=2021-11-03&endDate=2021-10-04&city=Campana",
+			"time": 16,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Status should be \"Bad Request\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Bad Request\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Status should be \"Bad Request\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "d7b9689b-c5bd-4cd7-88ad-418e22345915",
+			"name": "PUT products - admin",
+			"url": "http://localhost:8080/categories/update",
+			"time": 32,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				32
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "c0b1c43c-ca01-4297-9bc4-2e3759cee4ca",
+			"name": "PUT products - user",
+			"url": "http://localhost:8080/categories/update",
+			"time": 23,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Status should be \"Forbidden\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Forbidden\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Status should be \"Forbidden\"": true
+				}
+			]
+		},
+		{
+			"id": "ea7f6ce3-9ef1-415a-8134-8623b7384421",
+			"name": "GET features",
+			"url": "http://localhost:8080/features/list",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status must be \"OK\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status must be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status must be \"OK\"": true
+				}
+			]
+		},
+		{
+			"id": "c3bf0ae7-d8b4-4710-a7e0-8f9b2b832c18",
+			"name": "POST bookings",
+			"url": "http://localhost:8080/bookings/add",
+			"time": 123,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Status should be \"Created\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Created\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				123
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Status should be \"Created\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "738b2efe-7275-43a4-8da2-87f99ec7df01",
+			"name": "POST bookings - bad date 1",
+			"url": "http://localhost:8080/bookings/add",
+			"time": 21,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Status should be \"Bad Request\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Bad Request\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Status should be \"Bad Request\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "31888536-5d2e-4da2-b3e4-e245d8e7fcd1",
+			"name": "POST bookings - bad date 2",
+			"url": "http://localhost:8080/bookings/add",
+			"time": 25,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Status should be \"Bad Request\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Bad Request\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Status should be \"Bad Request\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "5f16a851-ead1-4223-a283-7387e77550ed",
+			"name": "POST bookings - wrong token",
+			"url": "http://localhost:8080/bookings/add",
+			"time": 15,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Status should be \"Unauthorized\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Unauthorized\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Status should be \"Unauthorized\"": true
+				}
+			]
+		},
+		{
+			"id": "b45d6e52-a752-4aaf-be8e-ba4277d1ff1b",
+			"name": "GET bookings by id - admin",
+			"url": "http://localhost:8080/bookings/1",
+			"time": 69,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body should include productId and productName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include productId and productName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				69
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body should include productId and productName": true
+				}
+			]
+		},
+		{
+			"id": "9505091b-5717-4749-a31a-880a9d9e2d84",
+			"name": "GET bookings by id - user",
+			"url": "http://localhost:8080/bookings/1",
+			"time": 24,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Status should be \"Forbidden\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Forbidden\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Status should be \"Forbidden\"": true
+				}
+			]
+		},
+		{
+			"id": "c2b74cee-c524-4676-b4d5-9523c71cbe18",
+			"name": "GET bookings by user",
+			"url": "http://localhost:8080/bookings/@me",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body should include productId and productName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should include productId and productName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body should include productId and productName": true
+				}
+			]
+		},
+		{
+			"id": "628a89cc-e202-4798-9541-679dbcd6234a",
+			"name": "GET bookings by user - no reservations",
+			"url": "http://localhost:8080/bookings/@me",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "1b34c92d-072e-452a-a4b4-4d5504c07d69",
+			"name": "GET products by dates - incorrect (date booked)",
+			"url": "http://localhost:8080/products/date?startDate=2022-08-01&endDate=2022-10-02&city=Campana",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "dd4afd97-e4cb-4c58-80f2-4884f337e79c",
+			"name": "GET products by dates - incorrect (date booked 2)",
+			"url": "http://localhost:8080/products/date?startDate=2022-07-31&endDate=2022-10-01&city=Campana",
+			"time": 32,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status should be \"OK\"": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				32
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status should be \"OK\"": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "30999648-02a8-4e93-9d40-1293d9af0ebd",
+			"name": "DELETE categories w/ products - admin",
+			"url": "http://localhost:8080/categories/delete/1",
+			"time": 116,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 500": true,
+				"Status should be \"Internal Server Error\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 500": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Internal Server Error\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				116
+			],
+			"allTests": [
+				{
+					"Status code is 500": true,
+					"Status should be \"Internal Server Error\"": true
+				}
+			]
+		},
+		{
+			"id": "d8f448ff-870b-42a9-af2f-d114708dd768",
+			"name": "DELETE categories wo/ products - admin",
+			"url": "http://localhost:8080/categories/delete/2",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body should be \"Category removed\".": true,
+				"Status should be \"OK\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body should be \"Category removed\".": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"OK\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body should be \"Category removed\".": true,
+					"Status should be \"OK\"": true
+				}
+			]
+		},
+		{
+			"id": "41f6bd7f-935e-43ef-bf72-1b7e6bbdde3f",
+			"name": "DELETE categories - user",
+			"url": "http://localhost:8080/categories/delete/1",
+			"time": 75,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Status should be \"Forbidden\"": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status should be \"Forbidden\"": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				75
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Status should be \"Forbidden\"": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3842,
+	"collection": {
+		"requests": [
+			{
+				"id": "63962425-267a-48a7-8b40-5cddc7672f8e",
+				"method": "POST"
+			},
+			{
+				"id": "70234393-5fdd-46f0-94de-29df89bcef78",
+				"method": "POST"
+			},
+			{
+				"id": "33e3a200-dd9c-4bc1-b699-deba2bed9239",
+				"method": "POST"
+			},
+			{
+				"id": "8397cad6-c929-4271-98b7-2acb0b2c230a",
+				"method": "POST"
+			},
+			{
+				"id": "19c6e935-a710-467f-8ede-879be9ff8429",
+				"method": "POST"
+			},
+			{
+				"id": "4c6e095b-0b06-476f-88f1-74c03a34f81c",
+				"method": "POST"
+			},
+			{
+				"id": "4e4b30ff-397c-4bea-876f-ad1c380dd4d3",
+				"method": "POST"
+			},
+			{
+				"id": "2a3e37d7-d36c-4b26-8656-8b0ef7080581",
+				"method": "POST"
+			},
+			{
+				"id": "55c6563d-b00e-4c17-8cb0-53158a0b5e81",
+				"method": "POST"
+			},
+			{
+				"id": "09cc2874-0541-4c04-bebb-9532e4b426d4",
+				"method": "GET"
+			},
+			{
+				"id": "6f5a2d5a-0ec3-49e7-856c-693799c11a94",
+				"method": "PUT"
+			},
+			{
+				"id": "18fd8cb4-1eee-4115-86ca-015a74b7ab2c",
+				"method": "PUT"
+			},
+			{
+				"id": "0764fed8-4143-48f6-84dc-f86c9216c718",
+				"method": "POST"
+			},
+			{
+				"id": "02de9987-45b6-4c51-95c9-fd0929bc216c",
+				"method": "POST"
+			},
+			{
+				"id": "9f3799d1-a583-4bbe-880a-fade75bdd8e4",
+				"method": "GET"
+			},
+			{
+				"id": "89a04995-fe09-45ae-9726-36e1f76750c6",
+				"method": "POST"
+			},
+			{
+				"id": "42bc152e-44a7-4fac-aea0-7238104b86b9",
+				"method": "POST"
+			},
+			{
+				"id": "b94f2208-e669-41f4-ac89-00c4af856970",
+				"method": "GET"
+			},
+			{
+				"id": "f3257e19-0c28-4a4b-a67e-f9519d82a4a8",
+				"method": "GET"
+			},
+			{
+				"id": "bbbb3365-66f0-4007-bdee-67530e5d9d01",
+				"method": "GET"
+			},
+			{
+				"id": "4b711b7d-8551-42f1-8f27-cf09e6f8417a",
+				"method": "GET"
+			},
+			{
+				"id": "1acd6935-1a84-491d-ad19-77bf0e6d669f",
+				"method": "GET"
+			},
+			{
+				"id": "2b0ba02b-72cc-4e80-bacf-fdc71fd31858",
+				"method": "GET"
+			},
+			{
+				"id": "aac042d6-bd5c-4ca1-b47d-d2d51fb00a0b",
+				"method": "GET"
+			},
+			{
+				"id": "d7b9689b-c5bd-4cd7-88ad-418e22345915",
+				"method": "PUT"
+			},
+			{
+				"id": "c0b1c43c-ca01-4297-9bc4-2e3759cee4ca",
+				"method": "PUT"
+			},
+			{
+				"id": "ea7f6ce3-9ef1-415a-8134-8623b7384421",
+				"method": "GET"
+			},
+			{
+				"id": "c3bf0ae7-d8b4-4710-a7e0-8f9b2b832c18",
+				"method": "POST"
+			},
+			{
+				"id": "738b2efe-7275-43a4-8da2-87f99ec7df01",
+				"method": "POST"
+			},
+			{
+				"id": "31888536-5d2e-4da2-b3e4-e245d8e7fcd1",
+				"method": "POST"
+			},
+			{
+				"id": "5f16a851-ead1-4223-a283-7387e77550ed",
+				"method": "POST"
+			},
+			{
+				"id": "b45d6e52-a752-4aaf-be8e-ba4277d1ff1b",
+				"method": "GET"
+			},
+			{
+				"id": "9505091b-5717-4749-a31a-880a9d9e2d84",
+				"method": "GET"
+			},
+			{
+				"id": "c2b74cee-c524-4676-b4d5-9523c71cbe18",
+				"method": "GET"
+			},
+			{
+				"id": "628a89cc-e202-4798-9541-679dbcd6234a",
+				"method": "GET"
+			},
+			{
+				"id": "1b34c92d-072e-452a-a4b4-4d5504c07d69",
+				"method": "GET"
+			},
+			{
+				"id": "dd4afd97-e4cb-4c58-80f2-4884f337e79c",
+				"method": "GET"
+			},
+			{
+				"id": "30999648-02a8-4e93-9d40-1293d9af0ebd",
+				"method": "DELETE"
+			},
+			{
+				"id": "d8f448ff-870b-42a9-af2f-d114708dd768",
+				"method": "DELETE"
+			},
+			{
+				"id": "41f6bd7f-935e-43ef-bf72-1b7e6bbdde3f",
+				"method": "DELETE"
+			}
+		]
+	}
+}

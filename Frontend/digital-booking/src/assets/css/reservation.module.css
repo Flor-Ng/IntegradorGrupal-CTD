@@ -1,0 +1,370 @@
+.background {
+    background-color: #eeeeee;
+}
+
+.subHeader {
+    background-color: #545776;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 42px;
+    align-items: center;
+}
+
+.categoryName {
+    color: #F3F1ED;
+    font-size: 14px;
+    padding: 0;
+    font-weight: 500;
+}
+
+.name {
+    color: white;
+    font-size: 24px;
+    padding: 0;
+    margin-top: 0;
+}
+
+.iconBack {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.subHeaderLeft {
+    margin: 0;
+}
+
+.title {
+    padding: 20px 0px;
+    margin: 0;
+    color: #383B58;
+    font-size: 24px;
+}
+
+.titleRight {
+    padding: 20px;
+    margin: 0;
+    color: #383B58;
+    font-size: 24px;
+}
+
+.mainRight {
+    padding: 20px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+
+.outsideMain {
+    padding: 0px 42px;
+}
+
+.mainBox {
+    display: flex;
+    width: 100%;
+    padding: 0px 42px 40px 42px;
+    gap: 25px;
+}
+
+.leftBox {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rightBox {
+    width: 30%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.inputsBox {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    padding: 15px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: center;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #383B58;
+}
+
+.input {
+    height: 40px;
+    width: 100%;
+    background-color: #DFE4EA;
+    opacity: 0.4;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #DFE4EA;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.inputSection {
+    width: 48%;
+    padding: 15px 0px;
+}
+
+.image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.arrivalTime {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.iconSection {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 22px;
+    color: #383B58;
+}
+
+.iconSection p {
+    padding: 0px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #383B58;
+}
+
+.arrivalTime select {
+    width: 40%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.selectSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.infoSection {
+    padding: 15px 0px;
+}
+
+.categoryNameRight {
+    margin: 0px;
+    padding: 0px;
+    color: #919191;
+    font-weight: 600;
+}
+
+.nameRight {
+    margin: 0px;
+    padding: 0px;
+    color: #383B58;
+    font-size: 24px;
+}
+
+.locationBox {
+    display: flex;
+    align-items: center;
+}
+
+.iconLocation {
+    font-size: 16px;
+    color: #383B58;
+}
+
+.location {
+    padding: 0px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #383B58;
+}
+
+.checkSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.checkSection h5 {
+    font-size: 16px;
+    color: #4F4F50;
+    margin: 0px;
+}
+
+.checkSection p {
+    margin: 0px;
+}
+
+.buttonBox {
+    text-align: center;
+    padding: 40px 10px 0px 10px;
+}
+
+.button {
+    background-color: #1DBEB4;
+    border: 1px solid #1DBEB4;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.infoBox {
+    width: 100%;
+    padding: 5px 42px 80px 42px;
+    background-color: white;
+}
+
+.calendar {
+    width: 100%;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px 0px;
+}
+
+.hide {
+    display: none;
+}
+
+.infoSection, .checkSection{
+    border-bottom: 1px solid #2a2929;
+}
+
+@media (max-width: 1233px) {
+    .mainBox {
+        flex-direction: column;
+    }
+
+    .leftBox {
+        width: 100%;
+    }
+
+    .rightBox {
+        width: 100%;
+    }
+
+    .mainRightContainer {
+        display: flex;
+        padding: 0px 20px 20px 20px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .imageContainer {
+        width: 50%;
+    }
+
+    .image {
+        border-radius: 5px;
+    }
+
+    .mainRight {
+        width: 50%;
+        height: 400px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .infoSection {
+        padding: 0px;
+    }
+
+    .buttonBox {
+        padding: 0px 10px;
+    }
+
+    .calendar{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 643px) {
+
+    .calendar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .outsideMain {
+        padding: 0px 8px;
+    }
+    
+    .mainBox {
+        display: flex;
+        width: 100%;
+        padding: 0px 8px 40px 8px;
+        gap: 25px;
+    }
+
+    .subHeader {
+        padding: 10px;
+    }
+
+    .inputsBox {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .inputSection {
+        width: 100%;
+    }
+
+    .arrivalTime select {
+        width: 100%;
+    }
+
+    .mainRightContainer {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .mainRight {
+        padding: 0px 15px 15px 15px;
+        height: 370px;
+        justify-content: space-between;
+    }
+
+    .imageContainer {
+        width: 100%;
+    }
+    .infoBox{
+        padding: 7px;
+    }
+    .image {
+        border-radius: 0px;
+    }
+
+    .mainRight {
+        width: 100%;
+    }
+}

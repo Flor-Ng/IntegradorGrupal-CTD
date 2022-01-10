@@ -1,0 +1,349 @@
+.background {
+    background-color: #eeeeee;
+}
+
+.subHeader {
+    background-color: #545776;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 42px;
+    align-items: center;
+}
+
+.mainContainer {
+    padding: 42px;
+}
+
+.title {
+    color: #383B58;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25px;
+    font-size: 24px;
+}
+
+.cardContainer {
+    background-color: white;
+    border: 1px solid #DFE4EA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.dataBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    padding-bottom: 30px;
+}
+
+.dataSection {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    padding-bottom: 30px;
+}
+
+.dataDescription {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.label {
+    font-size: 12px;
+    color: #383B58;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.input {
+    height: 40px;
+    width: 100%;
+    background-color: #FFFFFF;
+    opacity: 0.4;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.textarea {
+    height: 120px;
+    background-color: #FFFFFF;
+    opacity: 0.4;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    resize: none;
+}
+
+.subTitle {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    color: #383B58;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.featuresBox {
+    padding-bottom: 30px;
+}
+
+.featureEach {
+    display: flex;
+    gap: 1%;
+    padding: 15px 25px 35px 25px;
+    background-color: #bebebe1a;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.featureSection {
+    display: flex;
+    width: 100%;
+    gap: 1%;
+}
+
+.featureSectionOne, .featureSectionTwo, .buttonSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.featureSectionOne {
+    width: 75%;
+}
+
+.featureSectionTwo {
+    width: 25%;
+}
+
+.buttonSection {
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.button {
+    background-color: #1DBEB4;
+    height: 40px;
+    width: 40px;
+    color: #FFFFFF;
+    border: 1px solid #1DBEB4;
+    border-radius: 5px;
+    font-size: 45px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3px;
+}
+
+.buttonX {
+    background-color: #545776;
+    height: 40px;
+    width: 40px;
+    color: #FFFFFF;
+    border: 1px solid #545776;
+    border-radius: 5px;
+    font-size: 45px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8px;
+}
+
+.infoBox {
+    padding-bottom: 30px;
+}
+
+.infoSubBox {
+    display: flex;
+    padding: 25px;
+    gap: 1%;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.infoTitle {
+    color: #545776;
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.infoSection textarea {
+    height: 200px;
+}
+
+.imgBox {
+    padding-bottom: 30px;
+}
+
+.imgEach {
+    display: flex;
+    gap: 1%;
+    padding: 35px 25px;
+    background-color: #bebebe1a;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.imgSection {
+    width: 100%;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.btn {
+    width: 30%;
+    height: 50px;
+    background-color: #1DBEB4;
+    border: 1px solid #1DBEB4;
+    border-radius: 5px;
+    color: white;
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    text-align: right;
+    font-weight: bold;
+    padding: 0;
+}
+
+.inputError {
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    background-color: #FFE1E1;
+}
+
+.hide {
+    display: none;
+}
+
+.textareaError {
+    height: 120px;
+    background-color: #FFE1E1;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid red;
+    border-radius: 5px;
+    resize: none;
+}
+
+@media (max-width: 1200px) {
+
+    .subHeader {
+        padding: 10px 35px;
+    }
+    
+    .mainContainer {
+        padding: 35px;
+    }
+
+    .featureSection {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .featureSectionOne {
+        width: 98%;
+    }
+    
+    .featureSectionTwo {
+        width: 98%;
+    }
+
+    .buttonSection {
+        justify-content: center;
+    }
+
+    .featureEach .buttonSection {
+        padding-top: 22px;
+    }
+
+    .infoSubBox {
+        flex-direction: column;
+    }
+
+    .infoSection {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .infoSection textarea {
+        height: 120px;
+    }
+
+    .imgEach {
+        align-items: center;
+    }
+
+    .btn {
+        width: 60%;
+    }
+}
+
+@media (max-width: 643px) {
+
+    .subHeader {
+        padding: 10px 15px;
+    }
+    
+    .mainContainer {
+        padding: 35px 0;
+    }
+
+    .title {
+        padding: 0 0 20px 15px;
+        font-size: 18px;
+    }
+
+    .cardContainer {
+        border-radius: 0px;
+        padding: 20px 8px;
+    }
+
+    .dataBox {
+        flex-direction: column;
+        padding: 0 15px 30px 15px;
+    }
+
+    .dataSection {
+        width: 100%;
+    }
+
+    .dataDescription textarea {
+        height: 250px;
+    }
+
+    .btn {
+        width: 90%;
+    }
+
+    .featureEach {
+        padding: 15px 15px 35px 15px;
+    }
+
+    .infoSubBox {
+        padding: 25px 15px;
+        box-shadow: none;
+    }
+}

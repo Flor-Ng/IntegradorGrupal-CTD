@@ -1,0 +1,142 @@
+
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px 40px;
+    top: 0;
+}
+.logo_phr{
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+    text-decoration: none;
+}
+.logo_phr p {
+    font-family: 'roboto';
+    font-style: italic;
+    font-weight: lighter;
+    margin: 5px 0;
+}
+.log_sign{
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+.logSign{
+    color: #1DBEB4;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1.7px solid #1DBEB4;
+    height: 40px;
+    width: 206px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.user {
+    display: flex;
+    margin: 0;
+}
+
+.avatar {
+    background-color: #383B58;
+    color: white;
+    border: 1px solid #383B58;
+    border-radius: 50%;
+    padding: 5px;
+    height: 45px;
+    margin: 2px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatarBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+.logout {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.administration{
+    text-decoration: none;
+    color: #545776;
+    font-weight: 700;
+    border-right: 1px solid #1DBEB4;
+    width: 124px;
+    border-width: 2px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.logoutBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.greeting {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.greetingName {
+    color: #27c1b7;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+.menu{
+    display: none;
+}
+
+@media (max-width: 1200px){
+    .logSign{
+        width: 164px;
+    }
+    .header{
+        padding: 15px 32px
+    }
+    .logo_phr p{
+        display: none;
+    }
+}
+
+@media (max-width: 643px){
+    .logSign, .logo_phr p, .log_sign{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        font-size: 28px;
+    }
+    .header{
+        padding: 15px 15px;
+    }
+}

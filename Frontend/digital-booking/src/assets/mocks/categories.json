@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "img": "https://dmdiluminacion.com/wp-content/uploads/hotel-lp-012-1200x498.jpg",
+            "title": "Hotel",
+            "many": "807.000 Hoteles"
+        },
+        {
+            "img": "https://www.hostelcolonial.com.ar/wp-content/uploads/2017/10/Habitacion_Privada2-1.jpg",
+            "title": "Hostel",
+            "many": "1.000.000 Hostels"
+        },
+        {
+            "img": "https://www.ciudaris.com/blog/wp-content/uploads/like-jesus-maria-departamento-de-dos-habitaciones3-1024x682.jpg",
+            "title": "Departamento",
+            "many": "950.000 Departamentos"
+        },
+        {
+            "img": "https://ep01.epimg.net/elviajero/imagenes/2017/03/06/actualidad/1488816049_125793_1488819092_sumario_normal.jpg",
+            "title": "Bed and Breakfast",
+            "many": "1.150.000 Bed and Breakfast"
+        }
+    ]
+}

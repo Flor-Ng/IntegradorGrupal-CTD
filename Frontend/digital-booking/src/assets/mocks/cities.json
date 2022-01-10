@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "name": "Argentina, Buenos Aires",
+            "code": "ABS"
+        },
+        {
+            "name": "Argentina, Chaco",
+            "code": "ACH"
+        },
+        {
+            "name": "Argentina, Formosa",
+            "code": "AF"
+        },
+        {
+            "name": "Argentina, Bariloche, Río Negro",
+            "code": "AB"
+        },
+        {
+            "name": "Argentina, La Angostura, Neuquén",
+            "code": "ALN"
+        },
+        {
+            "name": "Argentina, El Chalten, Santa Cruz",
+            "code": "ACS"
+        },
+        {
+            "name": "Argentina, San Pedro, Río Negro",
+            "code": "ASR"
+        }
+    ]
+}

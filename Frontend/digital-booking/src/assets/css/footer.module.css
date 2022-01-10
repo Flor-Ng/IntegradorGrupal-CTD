@@ -1,0 +1,33 @@
+.footer{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: #1DBEB4;
+    color: white;
+    padding: 19px 50px;
+}
+
+.rights{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+.footer_icons{
+    gap: 12px;
+    display: flex;
+    font-size: 20px;
+}
+
+@media (max-width: 643px){
+    .footer{
+        padding: 19px 19px;
+    }
+    .footer_icons{
+        display: none;
+    }
+    .rights{
+        font-size: 14px;
+    }
+}

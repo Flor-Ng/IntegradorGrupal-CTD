@@ -1,0 +1,171 @@
+.p-galleria{
+  position: relative;
+  max-width: 50%;
+}
+
+.p-galleria-mask {
+  --maskbg: rgba(56, 59, 88, 0.9);
+}
+
+.p-galleria-thumbnail-container{
+  height: 100%;
+  padding: 40px 22px 40px 22px!important;
+  background: rgba(255, 255, 255, 1) !important;
+}
+.p-galleria-thumbnail-item{
+  border-radius: 7px;
+}
+
+.p-galleria-thumbnail-item img{
+  width: 100%;
+  height: 100%;
+}
+
+.p-galleria-thumbnail-items{
+  height: 100%;
+  gap: 5px;
+}
+
+.p-galleria-thumbnail-item-content{
+  height: 100%;
+  width: 100%;
+}
+
+.p-galleria-item img{
+  width: 100%;
+  height: 100%;
+  border-radius: 7px 7px 0 0;
+}
+
+.p-galleria-item-wrapper{
+  height: 65%;
+}
+
+.p-galleria-thumbnail-wrapper{
+  height: 35%;
+  border-radius: 0 0 7px 7px;
+}
+
+.p-galleria-content{
+  height: 88vh;
+}
+
+.p-galleria-item-next, .p-galleria-item-prev{
+  position: absolute !important;
+  background: rgba(29, 190, 180, 1) !important;
+  border-radius: 50% !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  top: 45% !important;
+}
+
+.p-galleria-item-next-icon, .p-galleria-item-prev-icon{
+  font-size: 1.5rem !important;
+}
+
+.p-galleria-close{
+  position: absolute;
+  z-index: 1;
+}
+
+.p-datepicker table td > span{
+    font-weight: 600;
+  }
+  
+  .p-calendar{
+    justify-content: center;
+  }
+  
+  .p-datepicker{
+    border-radius: 7px;
+  }
+  
+  .p-datepicker-header{
+    border-bottom: none !important;
+  }
+  
+  .p-datepicker-title{
+    font-weight: 700;
+    color: black;
+  }
+  .p-datepicker-multiple-month .p-datepicker-group-container{
+    justify-content: center;
+  }
+
+@media (max-width: 1750px){
+  .p-galleria{
+    max-width: 57% !important;
+  }
+}
+
+@media (max-width: 1500px){
+  .p-galleria{
+    max-width: 60% !important;
+  }
+}
+
+@media (max-width: 1240px){
+  .p-galleria{
+    max-width: 70% !important;
+  }
+  .p-calendar .p-datepicker {
+    min-width: 88%;
+  }
+}
+
+@media (max-width: 1024px){
+  .p-galleria-content{
+    height: 60vh;
+    justify-content: center;
+  }
+  .p-galleria{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .p-galleria-thumbnail-wrapper{
+    display: none;
+  }
+  .p-galleria-item-wrapper{
+    height: 90%;
+  }
+  .p-galleria-item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 !important;
+  }
+  .p-galleria-item-wrapper {
+    height: 100%;
+  }
+}
+
+@media (max-width: 643px){
+  .p-galleria .p-galleria-close{
+    width: 2rem;
+    height: 5rem;
+  }
+  .p-galleria .p-galleria-item-nav{
+    height: 2rem;
+    width: 2rem;
+  }
+  .p-galleria .p-galleria-item-nav .p-galleria-item-prev-icon, .p-galleria .p-galleria-item-nav .p-galleria-item-next-icon{
+    font-size: 1rem;
+  }
+  .p-calendar .p-datepicker {
+    min-width: 100%;
+  }
+  .p-calendar{
+    width: 100%;
+}
+}
+
+@media (min-height: 600px) and (max-height: 768px) and (min-width: 1024px){
+  .p-galleria-content{
+    height: 88vh;
+  }
+}
+
+  @media (min-height: 280px) and (max-height: 411px) and (min-width: 568px){
+    .p-galleria-content{
+      height: 95vh;
+    }
+}

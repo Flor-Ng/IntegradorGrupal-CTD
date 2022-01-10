@@ -1,0 +1,13 @@
+@import "../fonts/font.css";
+@import "primeicons/primeicons.css";
+@import "primereact/resources/themes/saga-blue/theme.css";
+@import "primereact/resources/primereact.min.css";
+
+body {
+  margin: 0;
+  font-family: 'roboto';
+}
+
+.p-inputtext {
+  width: 100%;
+}

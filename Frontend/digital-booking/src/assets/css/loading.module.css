@@ -1,0 +1,29 @@
+.loading{
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    z-index: 1100;
+}
+
+.boxLoading{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    background: rgba(56, 59, 88, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
